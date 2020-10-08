@@ -1,24 +1,29 @@
 /* リセットCSS */
+
 body {
   font-size: 14px;
   color: #333;
   margin: 0 auto;
+  text-align:center;
 }
 h1,h2,h3,h4,h5,h6,p {
   padding: 10px 0;
   margin: 0;
+  color: #244472;
 }
+
 
 ul,li {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 /* リセットCSSココまで */
 
 .header_bar{
   background-color: #000c28;
-  height: 8vh;
+  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -40,4 +45,41 @@ ul,li {
   color: white;
   padding-right: 25px;
   text-decoration: none;
+}
+
+.new_user{
+  background-color: #fafafa;
+  width: 70vw;
+  text-align:center;
+  margin: 0 auto;
+}
+
+.field{
+  height: 80px;
+}
+
+.input-default{
+  height: 40px;
+  font-size: 15px;
+  width: 250px;
+}
+
+.sign-up-btn,.log-in-btn{
+  height: 45px;
+  width: 200px;
+  font-size: 20px;
+  background-color: #244472;
+  border: none;
+  color: white;
+  margin:  20px;
+}
+.sign-up-ja{
+  padding: 0px;
+}
+
+.claim{
+  background-color: #244472;
+  color: white;
+  font-size: 8px;
+  padding: 3px;
 }

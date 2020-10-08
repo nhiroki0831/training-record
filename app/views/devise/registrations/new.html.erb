@@ -1,35 +1,44 @@
-<h2>新規登録</h2>
-
+<header>
+        <div class="header_bar">
+          <%= link_to "Customer Training Record", root_path , class: "header-title" %>
+        <div>
+        </div>
+</header>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <h1>Create Account</h1>
+  <h3 class="sign-up-ja">新規登録</h3>
+  <h4 class="sign-up-ja">全項目入力して<span class="claim">Sign up</span>をクリックして下さい</h4>
+  <h4 class="sign-up-ja">※登録済みの方は<span class="claim">Log in</span>をクリックしてログイン画面へ</h4>
   <%# 入力エラーメッセージ表示 %>
   <%= render 'shared/error_messages', model: f.object %>
 
    <div class="field">
-    <%= f.label :nickname %><br />
-    <%= f.text_field :nickname, autofocus: true %>
+    <% f.label :nickname %><br />
+    <%= f.text_field :nickname, autofocus: true , placeholder: "ニックネーム", class: "input-default" %>
   </div>
 
   <div class="field">
-    <%= f.label :email%><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <% f.label :email%><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス", class: "input-default" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <% f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password" ,placeholder: "6文字以上の半角英数字", class: "input-default" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <% f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "同じパスワードを入力して下さい", class: "input-default" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class:"sign-up-btn" %>
+    <%= link_to new_user_session_path do %>
+      <button class="sign-up-btn">Log in</button>
+    <% end %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
