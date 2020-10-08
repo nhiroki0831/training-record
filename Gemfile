@@ -64,3 +64,8 @@ gem 'rails-i18n'
 
 #デバッグ用gem導入
 gem 'pry-rails'
+
+#Heroku デプロイ用gem導入
+group :production do
+  gem 'rails_12factor'
+end
