@@ -64,7 +64,7 @@ ul,li {
   width: 250px;
 }
 
-.sign-up-btn,.log-in-btn{
+.sign-up-btn,.log-in-btn,.customer-input-btn{
   height: 45px;
   width: 200px;
   font-size: 20px;
@@ -82,4 +82,94 @@ ul,li {
   color: white;
   font-size: 8px;
   padding: 3px;
+}
+
+/* 顧客登録画面css */
+
+.customer-form{
+  background-color: #fafafa;
+  width: 70vw;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.name-form{
+  height: 35px;
+  width: 120px;
+  margin: 3px;
+}
+
+.required-input{
+  color: white;
+  background-color: red;
+  font-weight: bold;
+}
+
+.optical-input{
+  color: white;
+  background-color: navy;
+  font-weight: bold;
+}
+
+.birthday-form{
+  height: 35px;
+  width: 70px;
+}
+
+.postcode-form{
+  height: 35px;
+  width: 70px;
+}
+
+.prefecture-form{
+  height: 35px;
+  width: 70px;
+}
+
+.city-form{
+  height: 35px;
+  width: 180px;
+}
+
+.address-form,.build-form{
+  height: 35px;
+  width: 280px;
+}
+
+.tel-form{
+  height: 35px;
+  width: 100px;
+}
+
+.job-form{
+  height: 35px;
+  width: 150px;
+}
+
+.course-form{
+  height: 35px;
+  width: 250px;
+}
+
+.height-form{
+  height: 35px;
+  width: 50px;
+}
+
+.customer-formbox{
+  display: flex;
+  align-items: center;
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.form-title{
+  width:150px;
+  text-align: left;
+}
+
+.radio-btn{
+  margin:20px;
+  padding-left: 60px;
 }

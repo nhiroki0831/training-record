@@ -1,0 +1,132 @@
+<%= render "shared/header" %>
+<%=form_with  url: "#", local: true do |f| %>
+<div class="customer-form">
+  <h1>顧客情報入力</h1>
+  <h4 class="sign-up-ja">※<span class="required-input">必須</span>項目を入力し<span class="claim">登録する</span>をクリックして下さい</h4><br>
+      <%# 氏名入力 %>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "氏名  " %><span class="required-input">必須</span>
+        </div>
+        <div>
+        <%= f.text_field :hoge ,placeholder: "姓", class: "name-form" %>
+        <%= f.text_field :hoge ,placeholder: "名", class: "name-form" %>
+        </div>
+      </div>
+      <%# フリガナ入力 %>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "氏名(フリガナ)  " %><span class="required-input">必須</span>
+        </div>
+        <div>
+        <%= f.text_field :hoge ,placeholder: "姓(全角カタカナ)", class: "name-form" %>
+        <%= f.text_field :hoge ,placeholder: "名(全角カタカナ)", class: "name-form" %>
+        </div>
+      </div>
+      <%# 性別選択 %>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "性別  "%><span class="required-input">必須</span>
+        </div>
+        <div class="radio-btn">
+        <%= f.label "男性"%>
+        <%= f.radio_button :hoge, "#" %>
+        <%= f.label "女性"%>
+        <%= f.radio_button :hoge, "#"%>
+        </div>
+      </div>
+      <%# 生年月日入力 %>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "生年月日  "%><span class="required-input">必須</span>
+        </div>
+        <div>
+        <%= f.text_field :hoge ,placeholder: "年", class: "birthday-form" %> 年
+        <%= f.text_field :hoge ,placeholder: "月", class: "birthday-form" %> 月
+        <%= f.text_field :hoge ,placeholder: "日", class: "birthday-form" %> 日
+        </div>
+      </div>  
+      <%# 郵便番号入力%>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "郵便番号  "%><span class="required-input">必須</span> 
+        </div>
+        <div>   
+        <%= f.text_field :hoge ,placeholder: "郵便番号", class: "postcode-form" %>
+        </div>
+      </div>
+      <%# 都道府県入力 %>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "都道府県  "%><span class="required-input">必須</span>
+        </div>
+        <div>
+        <%= f.text_field :hoge ,placeholder: "都道府県", class: "prefecture-form" %>
+        </div>
+      </div>  
+      <%# 市町村区入力 %>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "市区町村  "%><span class="required-input">必須</span>
+        </div>
+        <div>
+        <%= f.text_field :hoge ,placeholder: "市区町村", class: "city-form" %><br>
+        </div>
+      </div>
+      <%# 住所を入力 %>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "住所  "%><span class="required-input">必須</span>
+        </div>
+        <div>
+        <%= f.text_field :hoge ,placeholder: "住所", class: "address-form" %>
+        </div>
+      </div>
+      <%# 建物名を入力 %>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "建物名  "%><span class="optical-input">任意</span>
+        </div>
+        <div>
+        <%= f.text_field :hoge ,placeholder: "建物名", class: "build-form" %>
+        </div>
+      </div>
+      <%# 電話番号を入力 %>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "電話番号  "%><span class="required-input">必須</span>
+        </div>
+        <div>
+        <%= f.text_field :hoge ,placeholder: "電話番号", class: "tel-form" %>
+        </div>
+      </div>
+      <%# 職業を入力 %>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "職業  "%><span class="required-input">必須</span>
+        </div>
+        <div>
+        <%= f.text_field :hoge ,placeholder: "職業", class: "job-form" %>
+        </div>
+      </div>
+      <%# コースを入力 %>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "コース  "%><span class="required-input">必須</span><br>
+        </div>
+        <div>
+        <%= f.text_field :hoge ,placeholder: "コース", class: "course-form" %>
+        </div>
+      </div>
+      <%# 身長を入力 %>
+      <div class="customer-formbox">
+        <div class="form-title">
+        <%= f.label "身長  "%><span class="required-input">必須</span><br>
+        </div>
+        <div>
+        <%= f.text_field :hoge ,placeholder: "身長", class: "height-form" %><b> cm</b>
+        </div>
+      </div>
+    <%= f.submit "登録する", class: "customer-input-btn" %>
+</div>
+<% end %>
