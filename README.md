@@ -24,7 +24,7 @@
 | family_name        | string     | null: false                    |
 | first-name_k       | string     | null: false                    |
 | family_name_k      | string     | null: false                    |
-| gender_id          | integer    | null: false                    |
+| gender             | integer    | null: false                    |
 | birthday           | date       | null: false                    |
 | tel                | string     | null: false                    |
 | postal_code        | string     | null: false                    |
