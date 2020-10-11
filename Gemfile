@@ -69,3 +69,6 @@ gem 'pry-rails'
 group :production do
   gem 'rails_12factor'
 end
+
+#カテゴリー選択用gem導入
+gem 'active_hash'
