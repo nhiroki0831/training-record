@@ -6,6 +6,8 @@ class Customer < ApplicationRecord
 
   belongs_to :user
 
+  has_one_attached :image
+
   with_options presence: true do
     validates :first_name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は全角で入力してください' }
     validates :family_name, format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は全角で入力してください' } 
