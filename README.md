@@ -24,16 +24,17 @@
 | family_name        | string     | null: false                    |
 | first-name_k       | string     | null: false                    |
 | family_name_k      | string     | null: false                    |
-| gender_id          | integer    | null: false                    |
+| gender             | integer    | null: false                    |
 | birthday           | date       | null: false                    |
 | tel                | string     | null: false                    |
 | postal_code        | string     | null: false                    |
 | prefecture_id      | integer    | null: false                    |
+| city               | string     | null: false                    |
 | address            | string     | null: false                    |
 | building           | string     |                                |
-| height             | integer    | null: false                    |
 | job_id             | integer    | null: false                    |
 | course_id          | integer    | null: false                    |
+| height             | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
 

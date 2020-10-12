@@ -69,3 +69,10 @@ gem 'pry-rails'
 group :production do
   gem 'rails_12factor'
 end
+
+#カテゴリー選択用gem導入
+gem 'active_hash'
+
+#画像保存機能追加gem導入
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'

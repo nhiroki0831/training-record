@@ -19,3 +19,8 @@ module TrainingRecord
     # the framework and any gems in your application.
   end
 end
+
+# エラーメッセージ ビュー崩れを防止
+class Application < Rails::Application
+   config.action_view.field_error_proc = Proc.new { |html_tag, instance| html_tag }
+  end

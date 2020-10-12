@@ -3,3 +3,15 @@ ja:
     attributes:
       user:
         nickname: ニックネーム
+      customer:
+        first_name: 名前
+        family_name: 名字
+        first_name_k: 名前(フリガナ)
+        family_name_k: 名字(フリガナ)
+        gender: 性別
+        birthday: 誕生日
+        tel: 電話番号
+        postal_code: 郵便番号
+        city: 市区町村
+        address: 住所
+        height: 身長
