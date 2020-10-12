@@ -15,7 +15,7 @@ class CreateCustomers < ActiveRecord::Migration[6.0]
       t.string          :building
       t.integer         :job_id,          null: false
       t.integer         :course_id,       null: false
-      t.integer         :height,          null: false
+      t.float           :height,          null: false
       t.references      :user,            foreign_key: true
       t.timestamps
     end

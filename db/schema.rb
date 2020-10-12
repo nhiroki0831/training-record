@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_10_11_034412) do
     t.string "building"
     t.integer "job_id", null: false
     t.integer "course_id", null: false
-    t.integer "height", null: false
+    t.float "height", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -10,8 +10,8 @@
         <%= f.label "氏名  " %><span class="required-input">必須</span>
         </div>
         <div>
-        <%= f.text_field :first_name ,placeholder: "姓", class: "name-form" %>
-        <%= f.text_field :family_name ,placeholder: "名", class: "name-form" %>
+        <%= f.text_field :first_name ,placeholder: "全角のみ", class: "name-form" %>
+        <%= f.text_field :family_name ,placeholder: "全角のみ", class: "name-form" %>
         </div>
       </div>
       <%# フリガナ入力 %>
@@ -63,7 +63,7 @@
         <%= f.label "郵便番号  "%><span class="required-input">必須</span> 
         </div>
         <div>   
-        <%= f.text_field :postal_code ,placeholder: "郵便番号", class: "postcode-form" %>
+        <%= f.text_field :postal_code ,placeholder: "123-4567", class: "postcode-form" %>
         </div>
       </div>
       <%# 都道府県入力 %>
@@ -81,7 +81,7 @@
         <%= f.label "市区町村  "%><span class="required-input">必須</span>
         </div>
         <div>
-        <%= f.text_field :city ,placeholder: "市区町村", class: "city-form" %><br>
+        <%= f.text_field :city ,placeholder: "○○○市", class: "city-form" %><br>
         </div>
       </div>
       <%# 住所を入力 %>
@@ -90,7 +90,7 @@
         <%= f.label "住所  "%><span class="required-input">必須</span>
         </div>
         <div>
-        <%= f.text_field :address ,placeholder: "住所", class: "address-form" %>
+        <%= f.text_field :address ,placeholder: "○○町123-4", class: "address-form" %>
         </div>
       </div>
       <%# 建物名を入力 %>
@@ -99,16 +99,16 @@
         <%= f.label "建物名  "%><span class="optical-input">任意</span>
         </div>
         <div>
-        <%= f.text_field :building ,placeholder: "建物名", class: "build-form" %>
+        <%= f.text_field :building ,placeholder: "○○ビル123", class: "build-form" %>
         </div>
       </div>
       <%# 電話番号を入力 %>
       <div class="customer-formbox">
         <div class="form-title">
-        <%= f.label "電話番号  "%><span class="required-input">必須</span>
+        <%= f.label "電話番号  "%><span class="required-input">必須</span><br>
         </div>
         <div>
-        <%= f.text_field :tel ,placeholder: "電話番号", class: "tel-form" %>
+        <%= f.text_field :tel ,placeholder: "09012345678", class: "tel-form" %>
         </div>
       </div>
       <%# 職業を入力 %>
@@ -135,7 +135,7 @@
         <%= f.label "身長  "%><span class="required-input">必須</span><br>
         </div>
         <div>
-        <%= f.text_field :height ,placeholder: "身長", class: "height-form" %><b> cm</b>
+        <%= f.number_field :height, step: "0.1" , class: "height-form" %><b> cm<span class="height-few" >  ※少数第一位まで入力できます</span></b>
         </div>
       </div>
     <%= f.submit "登録する", class: "customer-input-btn" %>
