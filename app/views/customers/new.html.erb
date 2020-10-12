@@ -3,7 +3,9 @@
 <div class="customer-form">
   <h1>顧客情報入力</h1>
   <h4 class="sign-up-ja">※<span class="required-input">必須</span>項目を入力し<span class="claim">登録する</span>をクリックして下さい</h4><br>
-  <%= render 'shared/error_messages', model: f.object %>
+      <div>
+        <%= render 'shared/error_messages', model: f.object %>
+      </div>
       <%# 写真保存 %>
       <div class="customer-formbox">
         <div class="form-title">
