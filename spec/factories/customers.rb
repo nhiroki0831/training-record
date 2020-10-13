@@ -14,5 +14,6 @@ FactoryBot.define do
     job_id        { '2' }
     course_id     { '2' }
     height        { '165.0' }
+    
   end
 end
