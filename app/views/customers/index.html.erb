@@ -6,7 +6,12 @@
 <% @customers.each do |customer|%>
 <div class="customer-info-box">
   <div class="customer-image">
+    <%# 画像がない場合はNO IMAGEを表示 %>
+    <% if customer.image.attached? %>
     <%= image_tag customer.image, size: '100x100' , class: "image" %>
+    <% else %>
+    <%= image_tag 'no_image.png', size: '100x100' , class: "image" %>
+    <% end %>
   </div>
   <div class="customer-info">
     <div class="customer-id-course">
@@ -22,7 +27,25 @@
       <div class="customer-name">
         <span class="name"><%= customer.first_name %> <%= customer.family_name %></span> 
       </div>
-      <div class="training-count">残り回数○○回
+      <div class="training-count">
+        <%# 選択コースによって残りの回数を表示 %>
+        <% if customer.course_id == 2 %>
+        <% count = 16 %>
+        <% elsif customer.course_id == 3 %>
+        <% count = 24 %>
+        <% elsif customer.course_id == 4 %>
+        <% count = 32 %>
+        <% elsif customer.course_id == 5 %>
+        <% count = 48 %>
+        <% elsif customer.course_id == 6 %>
+        <% count = 64 %>
+        <% elsif customer.course_id == 7 %>
+        <% count = 96 %>
+        <% end %>
+        <%# 選択コースがその他の場合は非表示 %>
+        <% unless  customer.course_id == 8 %>
+        残り回数<%= count %>回
+        <% end %>
       </div>
     </div>  
   </div>
