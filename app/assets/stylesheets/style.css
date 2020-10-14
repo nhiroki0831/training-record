@@ -299,12 +299,18 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: center;
 }
 
-.record-btn {
-  height: 45px;
+.record-btn{
+  height: 40px;
   width: 150px;
   font-size: 18px;
   background-color: #244472;
   color: white;
   border: none;
   border-radius: 10px;
+  margin: 5px;
+}
+
+.customer-show{
+  text-decoration: none;
+  color: black;
 }

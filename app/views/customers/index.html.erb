@@ -14,6 +14,7 @@
     <% end %>
   </div>
   <div class="customer-info">
+    <%= link_to customer_path(customer.id) , class: "customer-show"  do %>
     <div class="customer-id-course">
        <div class="id-number">id:</div>
       <div class="customer-id">
@@ -49,6 +50,7 @@
       </div>
     </div>  
   </div>
+  <% end %>
   <div class="recording">
     <%= link_to "#" do %>
       <button class="record-btn">記録する</button>
