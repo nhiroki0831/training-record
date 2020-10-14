@@ -6,6 +6,7 @@
           <%# <%= link_to "新規登録", new_user_registration_path , class: "sign-up"%>
           <%# <%= link_to "ログイン", new_user_session_path , class: "sign-in"%> 
           <% else %>
+          <%= link_to "顧客登録" , new_customer_path , class: "customer-input-link"%>
           <%= link_to "ログアウト", destroy_user_session_path , method: :delete, class: "log-out"%>
           <% end %>
         </div>

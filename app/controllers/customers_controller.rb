@@ -2,6 +2,7 @@ class CustomersController < ApplicationController
   before_action :move_to_login
 
   def index
+    @customers = Customer.all
   end
 
   def new

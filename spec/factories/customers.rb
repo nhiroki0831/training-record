@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :customer do
-    first_name    { '竈門' }
-    family_name   { '炭治郎' }
-    first_name_k  { 'カマド' }
-    family_name_k { 'タンジロウ' }
+    first_name    { 'あああ' }
+    family_name   { 'あああ' }
+    first_name_k  { 'アアア' }
+    family_name_k { 'アアア' }
     gender        { '1' }
     birthday      { '1930/01/01'}
     tel           { '09012345678'}

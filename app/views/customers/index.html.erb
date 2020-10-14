@@ -1,5 +1,36 @@
 <%= render "shared/header" %>
 <body>
-<h1>表示テスト</h1>
-<%= link_to "顧客登録" , new_customer_path %>
+<h1>顧客登録一覧</h1>
+<h4>※新規登録は右上の<span class="customer-input-text">顧客登録</span>をクリックしてください。</h4><br>
+<div class="top-border"></div>
+<% @customers.each do |customer|%>
+<div class="customer-info-box">
+  <div class="customer-image">
+    <%= image_tag customer.image, size: '100x100' , class: "image" %>
+  </div>
+  <div class="customer-info">
+    <div class="customer-id-course">
+       <div class="id-number">id:</div>
+      <div class="customer-id">
+        <%= customer.id %>
+      </div>
+      <div class="customer-course">
+        選択コース : <%= customer.course.name%>
+      </div>
+    </div>
+    <div class="customer-name-count"> 
+      <div class="customer-name">
+        <span class="name"><%= customer.first_name %> <%= customer.family_name %></span> 
+      </div>
+      <div class="training-count">残り回数○○回
+      </div>
+    </div>  
+  </div>
+  <div class="recording">
+    <%= link_to "#" do %>
+      <button class="record-btn">記録する</button>
+    <% end %>
+  </div>
+</div>
+<% end %>  
 </body>
