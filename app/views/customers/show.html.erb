@@ -1,1 +1,90 @@
 <%= render "shared/header2" %>
+<h1>マイページ</h1>
+<div class="customer-show-box" >
+  <div class="profile">
+    <div class="profile-image-box">
+      <% if @customer.image.attached? %>
+      <%= image_tag @customer.image, size: '200x200' , class: "image" %>
+      <% else %>
+      <%= image_tag 'no_image.png', size: '200x200' , class: "image" %>
+      <% end %>
+    </div>
+    <div class="profile-info">
+      <h4 class="profile-title">プロフィール</h4>
+      <div class="profile-item">
+      <div class="profile-item-title">氏名:</div>
+      <div class="item-text"><%= @customer.first_name %><%= @customer.family_name %></div>
+      </div>
+      <div class="profile-item">
+      <div class ="profile-item-title">フリガナ:</div>
+      <div class="item-text"><%= @customer.first_name_k %><%= @customer.family_name_k %></div>
+      </div>
+      <div class="profile-item">
+      <%# 性別1なら男性、2なら女性を表示 %>
+      <div class ="profile-item-title">性別:</div>
+      <div class= "item-text">
+        <% if @customer.gender == 1%>男性
+        <% else %>女性
+        <% end %>
+      </div>
+      </div>
+      <div class="profile-item">
+      <div class="profile-item-title">生年月日:</div>
+      <div class="item-text"><%= @customer.birthday.strftime("%Y月%-m月%-d日") %></div>
+      </div>
+      <div class="profile-item">
+      <div class="profile-item-title">年齢:</div>
+      <%# 生年月日から年齢を計算表示 %>
+      <div class="item-text">
+      <% birth = @customer.birthday.strftime("%Y%m%d").to_i %>
+      <% today = Date.today.strftime("%Y%m%d").to_i %>
+      <% age = (today - birth ) / 10000 %>
+      <%= age %>歳
+      </div>
+      </div>
+      <div class="profile-item">
+      <div class="profile-item-title">郵便番号:</div>
+      <div class="item-text">〒<%= @customer.postal_code %></div>
+      </div>
+      <div class="profile-item">
+      <div class="profile-item-title">都道府県:</div>
+      <div class="item-text"><%= @customer.prefecture.name %></div>
+      </div>
+      <div class="profile-item">
+      <div class="profile-item-title">市区町村:</div>
+      <div class="item-text"><%= @customer.city %></div>
+      </div>
+      <div class="profile-item">
+      <div class="profile-item-title">住所:</div>
+      <div class="item-text"><%= @customer.address %></div>
+      </div>
+      <% if @customer.building?%>
+      <div class="profile-item">
+      <div class="profile-item-title">建物:</div>
+      <div class="item-text"><%= @customer.building %></div>
+      </div> 
+      <% end %>
+      <div class="profile-item">
+      <div class="profile-item-title">電話番号:</div>
+      <div class="item-text"><%= @customer.tel %></div>
+      </div>
+      <div class="profile-item">
+      <div class="profile-item-title">職業:</div>
+      <div class="item-text"><%= @customer.job.name %></div>
+      </div>
+      <div class="profile-item">
+      <div class="profile-item-title">コース:</div>
+      <div class="item-text"><%= @customer.course.name %></div>
+      </div>
+      <div class="profile-item">
+      <div class="profile-item-title">身長:</div>
+      <div class="item-text"><%= @customer.height %>cm</div>
+      </div>
+      <%= link_to "#" do %>
+      <button class="edit-btn">編集する</button>
+      <% end %>
+    </div>
+  </div>
+  <div class="result">
+  </div>
+</div>
