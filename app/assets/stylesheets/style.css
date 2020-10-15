@@ -228,7 +228,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .customer-image{
-  background-color: none;
+  background-color: black;
   width: 100px;
   height: 100px;
   position: relative;
@@ -299,12 +299,95 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: center;
 }
 
-.record-btn {
-  height: 45px;
+.record-btn{
+  height: 40px;
   width: 150px;
   font-size: 18px;
   background-color: #244472;
   color: white;
   border: none;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  margin: 5px;
+}
+
+.customer-show{
+  text-decoration: none;
+  color: black;
+}
+
+/* 顧客詳細、実績画面css */
+
+.customer-show-box{
+ background-color: #fafafa;
+ width: 900px;
+ margin: 0 auto;
+ height: 100vh;
+}
+
+.profile{
+  background-color: none;
+  width: 200px;
+  height: 200px;
+}
+
+.result{
+  background-color: orange;
+  width: 700px;
+}
+
+.profile-image-box{
+  background-color: black;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 200px;
+}
+
+.profile-image{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-title{
+  text-align: center;
+  color: black;
+}
+
+.profile-info{
+  text-align: center;
+  font-size: 12px;
+  font-family: "Arial", "メイリオ";
+  background-color: lightgray;
+  margin-top: 20px;
+}
+
+.profile-item{
+  display: flex;
+  background-color: none ;
+}
+
+.profile-item-title{
+  width: 60px;
+  background-color: none;
+  text-align: right;
+}
+
+.item-text{
+  text-align: center;
+  background-color: none;
+  width: 140px;
+  margin: 2px;
+}
+
+.edit-btn{
+  height: 30px;
+  width: 120px;
+  font-size: 12px;
+  background-color: #244472;
+  color: white;
+  border: none;
+  margin: 10px;
 }
