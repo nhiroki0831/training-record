@@ -52,7 +52,6 @@
 | blood_pressure_max | integer    | null: false                    |
 | blood_pressure_min | integer    | null: false                    |
 | pulse              | integer    | null: false                    |
-| training_count     | integer    | null: false                    |
 | remarks            | text       |                                |
 | customer           | references | null: false, foreign_key: true |
 
