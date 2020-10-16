@@ -80,7 +80,7 @@
       <div class="profile-item-title">身長:</div>
       <div class="item-text"><%= @customer.height %>cm</div>
       </div>
-      <%= link_to "#" do %>
+      <%= link_to edit_customer_path(@customer.id) do %>
       <button class="edit-btn">編集する</button>
       <% end %>
     </div>
