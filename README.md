@@ -52,6 +52,8 @@
 | blood_pressure_max | integer    | null: false                    |
 | blood_pressure_min | integer    | null: false                    |
 | pulse              | integer    | null: false                    |
+| part_a_id          | integer    | null: false                    |
+| part_b_id          | integer    |                                |
 | remarks            | text       |                                |
 | customer           | references | null: false, foreign_key: true |
 

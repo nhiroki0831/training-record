@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 2020_10_16_084704) do
     t.integer "blood_pressure_max", null: false
     t.integer "blood_pressure_min", null: false
     t.integer "pulse", null: false
+    t.integer "part_a_id", null: false
+    t.integer "part_b_id"
     t.text "remarks"
     t.bigint "customer_id"
     t.datetime "created_at", precision: 6, null: false
