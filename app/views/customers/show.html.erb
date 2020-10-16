@@ -83,6 +83,9 @@
       <%= link_to edit_customer_path(@customer.id) do %>
       <button class="edit-btn">編集する</button>
       <% end %>
+      <%= link_to customer_path(@customer.id) , method: :delete , data: {confirm: "削除すると元に戻せません\n\n削除しても本当に宜しいですか？"} do %>
+      <button class="delete-btn">削除する</button>
+      <% end %>
     </div>
   </div>
   <div class="result">

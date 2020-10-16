@@ -382,7 +382,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 2px;
 }
 
-.edit-btn{
+.edit-btn,.delete-btn{
   height: 30px;
   width: 120px;
   font-size: 12px;
