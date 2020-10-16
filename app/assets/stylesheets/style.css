@@ -78,7 +78,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 250px;
 }
 
-.sign-up-btn,.log-in-btn,.customer-input-btn{
+.sign-up-btn,.log-in-btn,.customer-input-btn,.index-btn{
   height: 45px;
   width: 200px;
   font-size: 20px;
