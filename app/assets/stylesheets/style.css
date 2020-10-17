@@ -78,7 +78,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 250px;
 }
 
-.sign-up-btn,.log-in-btn,.customer-input-btn,.index-btn{
+.sign-up-btn,.log-in-btn,.customer-input-btn,.index-btn,.recording-btn{
   height: 45px;
   width: 200px;
   font-size: 20px;
@@ -390,4 +390,81 @@ input[type="number"]::-webkit-inner-spin-button {
   color: white;
   border: none;
   margin: 10px;
+}
+
+/* トレーニング記録画面css */
+
+.training-form{
+  background-color: yellow;
+  width: 70vw;
+  margin: 0 auto;
+  align-items: center;
+  height: 500px;
+}
+
+/* .training-customer-date{
+  display: flex;
+}
+
+.training-form-image-box{
+  background-color: paleturquoise;
+  height: 80px;
+  width: 80px;
+}
+
+.training-form-first{
+  width:140px;
+  background-color: blue;
+  margin-left:20px;
+} */
+
+.training-record{
+  background-color: pink;
+  height: 300px;
+  display: flex;
+  width: 650px;
+  margin: 0 auto;
+}
+
+.training-input-form{
+  height: 30px;
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.weight-body-fat,.blood{
+  padding-top: 30px;
+}
+
+.training-item-title{
+  width:60px;
+  line-height: 45px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 14px;
+}
+
+.weight,.body-fat,.blood-max,.blood-min,.pulse{
+  display: flex;
+}
+
+.unit{
+  line-height: 45px;
+  font-size: 14px;
+  margin-right:10px;
+  margin-left: 3px;
+  font-weight: 800;
+}
+
+.part{
+  font-weight: 1000px;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.training-text{
+  height: 100px;
+  width: 200px;
+  margin-left: 45px;
 }
