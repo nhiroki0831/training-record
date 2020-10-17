@@ -6,8 +6,7 @@ class CreateTrainings < ActiveRecord::Migration[6.0]
       t.integer    :blood_pressure_max, null: false
       t.integer    :blood_pressure_min, null: false
       t.integer    :pulse,              null: false
-      t.integer    :part_a_id,          null: false
-      t.integer    :part_b_id
+      t.text       :part,               null: false
       t.text       :remarks
       t.references :customer,           foreign_key: true
       t.timestamps

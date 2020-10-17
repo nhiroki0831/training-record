@@ -5,6 +5,7 @@ class Customer < ApplicationRecord
   belongs_to_active_hash :course
 
   belongs_to :user
+  has_many :trainings
 
   has_one_attached :image
 
