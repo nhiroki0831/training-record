@@ -90,7 +90,7 @@
     </div>
     <div class="training-menu">
       <div class="part menu">
-        -トレーニングメニュー-<br>
+        トレーニングメニュー(複数選択可)<br>
         <% %w(胸 背中 肩 腕 腹 脚 その他).each do |part| %>
         <label>
           <%= f.check_box :part, { multiple: true} , part, nil %>

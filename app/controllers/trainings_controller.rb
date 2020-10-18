@@ -8,8 +8,7 @@ class TrainingsController < ApplicationController
   def create
     @customer = Customer.find(params[:customer_id])
     @training = Training.new(training_params)
-    if @training.valid?
-      @training.save
+    if @training.save
     else 
       render :index
     end  
