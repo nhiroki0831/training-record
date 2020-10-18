@@ -11,6 +11,8 @@ class Training < ApplicationRecord
   end
 
     validates :part, presence: {message: 'は必ず１つ選択して下さい'} 
+    validates :weight, numericality: {less_than_or_equal_to: 250 }
+    validates :body_fat, numericality: {less_than_or_equal_to: 90 }
     validates :blood_pressure_max, numericality: {greater_than_or_equal_to: 60, less_than_or_equal_to: 260 }
     validates :blood_pressure_min, numericality: {greater_than_or_equal_to: 40, less_than_or_equal_to: 215 }
     validates :pulse, numericality: {greater_than_or_equal_to: 40, less_than_or_equal_to: 180 }

@@ -1,6 +1,6 @@
 <%= render "shared/header2" %>
 <h1>トレーニング記録</h1>
-<h4 class="sign-up-ja">※<span class="required-input">必須</span>項目を入力し<span class="claim">記録する</span>をクリックして下さい</h4><br>
+<h4 class="sign-up-ja">※<span class="required-input"></span>項目を入力し<span class="claim">記録する</span>をクリックして下さい</h4><br>
  <div class="recording-error">
     <%= render 'shared/error_messages', model: @training %>
   </div>
@@ -80,7 +80,7 @@
         <%= f.number_field :blood_pressure_max , placeholder: "最高血圧" , class: "training-input-form"%><span class="unit" >mmHg</span>
       </div>
       <div class="blood-min">
-        <div class= "training-item-title">最高血圧:</div>
+        <div class= "training-item-title">最低血圧:</div>
         <%= f.number_field :blood_pressure_min , placeholder: "最低血圧" , class: "training-input-form"%><span class="unit" >mmHg</span>
       </div>
       <div class="pulse">
