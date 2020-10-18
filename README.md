@@ -34,7 +34,7 @@
 | building           | string     |                                |
 | job_id             | integer    | null: false                    |
 | course_id          | integer    | null: false                    |
-| height             | integer    | null: false                    |
+| height             | float      | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
 
@@ -47,12 +47,13 @@
 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
-| weight             | integer    | null: false                    |
-| body_fat           | integer    | null: false                    |
+| weight             | float      | null: false                    |
+| body_fat           | float      | null: false                    |
 | blood_pressure_max | integer    | null: false                    |
 | blood_pressure_min | integer    | null: false                    |
 | pulse              | integer    | null: false                    |
-| training_count     | integer    | null: false                    |
+| part_a_id          | integer    | null: false                    |
+| part_b_id          | integer    |                                |
 | remarks            | text       |                                |
 | customer           | references | null: false, foreign_key: true |
 

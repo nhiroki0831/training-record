@@ -18,3 +18,10 @@ ja:
         job_id: 職業
         course_id: コース
         height: 身長
+      training:
+        weight: 体重
+        body_fat: 体脂肪
+        blood_pressure_max: 最高血圧
+        blood_pressure_min: 最低血圧
+        pulse: 脈拍
+        part: トレーニングメニュー
