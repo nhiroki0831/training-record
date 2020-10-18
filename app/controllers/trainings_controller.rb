@@ -1,6 +1,7 @@
 class TrainingsController < ApplicationController
 
   def index
+    @customer = Customer.find(params[:customer_id])
   end
 
   def create

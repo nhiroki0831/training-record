@@ -1,21 +1,71 @@
 <%= render "shared/header2" %>
 <h1>トレーニング記録</h1>
 <h4 class="sign-up-ja">※<span class="required-input">必須</span>項目を入力し<span class="claim">記録する</span>をクリックして下さい</h4><br>
+<%= render 'shared/error_messages', model: @customer %>
 <div class="training-form">
-  <%# 顧客の情報表示はトレーニング入力機能実装後に対応 %>
-  <%# <div class="training-customer-date">
+  <div class="training-customer-date">
     <div class="training-form-image-box">
+      <% if @customer.image.attached? %>
+      <%= image_tag @customer.image, size: '70x70' , class: "training-form-image" %>
+      <% else %>
+      <%= image_tag 'no_image.png', size: '70x70' , class: "training-form-image" %>
+      <% end %>
     </div>
-    <div class="training-form-first">
+    <div class="training-form-name">
+      <div class="name-form-k">
+        <%= @customer.first_name_k %>
+      </div>
+      <div class="name-form-main">
+        <%= @customer.first_name%>
+      </div>
     </div>
-  </div> %>
-  <%# 顧客の情報表示はトレーニング入力機能実装後に対応 %>
+     <div class="training-form-name">
+      <div class="name-form-k">
+        <%= @customer.family_name_k %>
+      </div>
+      <div class="name-form-main">
+        <%= @customer.family_name %>
+      </div>
+    </div>
+    <div class="training-form-height-age">
+      身長:<%= @customer.height %>cm
+      <% birth = @customer.birthday.strftime("%Y%m%d").to_i %>
+      <% today = Date.today.strftime("%Y%m%d").to_i %>
+      <% age = (today - birth ) / 10000 %>
+      年齢<%= age %>歳
+    </div>
+    <div class="training-from-course">
+      <div class="training-course-title">
+          選択コース : <%= @customer.course.name%>
+      </div>
+      <div class="remaining">
+        <%# 選択コースによって残りの回数を表示 %>
+        <% if @customer.course_id == 2 %>
+        <% count = 16 %>
+        <% elsif @customer.course_id == 3 %>
+        <% count = 24 %>
+        <% elsif @customer.course_id == 4 %>
+        <% count = 32 %>
+        <% elsif @customer.course_id == 5 %>
+        <% count = 48 %>
+        <% elsif @customer.course_id == 6 %>
+        <% count = 64 %>
+        <% elsif @customer.course_id == 7 %>
+        <% count = 96 %>
+        <% end %>
+        <%# 選択コースがその他の場合は非表示 %>
+        <% unless  @customer.course_id == 8 %>
+        残り回数    <%= count %>回
+        <% end %>
+      </div>
+    </div>
+  </div>
   <%=form_with url: customer_trainings_path , local: true do |f| %>
   <div class="training-record">
-    <div class="weight-body-fat">
+        <div class="weight-body-fat">
       <div class="weight">
         <div class= "training-item-title" >体重:</div>
-        <%= f.number_field :weight ,placeholder: "体重", class: "training-input-form" %><span class="unit">kg</span>
+        <%= f.number_field :weight ,placeholder: "体重", class: "training-input-form"%><span class="unit">kg</span>
       </div>
       <div class="body-fat">
         <div class= "training-item-title" >体脂肪:</div>
@@ -38,7 +88,7 @@
     </div>
     <div class="training-menu">
       <div class="part menu">
-        ■トレーニングメニュー<br>
+        -トレーニングメニュー-<br>
         <% %w(胸 背中 肩 腕 腹 脚 その他).each do |part| %>
         <label>
           <%= f.check_box :part, { multiple: true} , part, nil %>
@@ -51,6 +101,6 @@
       </div>
     </div>
   </div>
-     <%= f.submit  %> 
+     <%= f.submit '記録する' , class:"recording-btn" %>
   <% end %>
 </div>
