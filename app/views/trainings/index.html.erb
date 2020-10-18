@@ -1,7 +1,9 @@
 <%= render "shared/header2" %>
 <h1>トレーニング記録</h1>
 <h4 class="sign-up-ja">※<span class="required-input">必須</span>項目を入力し<span class="claim">記録する</span>をクリックして下さい</h4><br>
-<%= render 'shared/error_messages', model: @customer %>
+ <div class="recording-error">
+    <%= render 'shared/error_messages', model: @training %>
+  </div>
 <div class="training-form">
   <div class="training-customer-date">
     <div class="training-form-image-box">
@@ -62,14 +64,14 @@
   </div>
   <%=form_with url: customer_trainings_path , local: true do |f| %>
   <div class="training-record">
-        <div class="weight-body-fat">
+      <div class="weight-body-fat">
       <div class="weight">
         <div class= "training-item-title" >体重:</div>
-        <%= f.number_field :weight ,placeholder: "体重", class: "training-input-form"%><span class="unit">kg</span>
+        <%= f.number_field :weight , step: "0.1" ,placeholder: "体重", class: "training-input-form"%><span class="unit">kg</span>
       </div>
       <div class="body-fat">
         <div class= "training-item-title" >体脂肪:</div>
-        <%= f.number_field :body_fat , placeholder: "体脂肪" , class: "training-input-form"%><span class="unit">%</span>
+        <%= f.number_field :body_fat , step: "0.1" , placeholder: "体脂肪" , class: "training-input-form"%><span class="unit">%</span>
       </div>
     </div>  
     <div class="blood">
@@ -100,7 +102,9 @@
         <%= f.text_area :remarks , placeholder: "備考" , class: "training-text" %>
       </div>
     </div>
+  </div>  
+
+    <%= f.submit '記録する' , class:"recording-btn" %>
   </div>
-     <%= f.submit '記録する' , class:"recording-btn" %>
   <% end %>
 </div>

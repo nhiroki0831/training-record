@@ -2,11 +2,17 @@ class TrainingsController < ApplicationController
 
   def index
     @customer = Customer.find(params[:customer_id])
+    @training = Training.new
   end
 
   def create
+    @customer = Customer.find(params[:customer_id])
     @training = Training.new(training_params)
-    @training.save
+    if @training.valid?
+      @training.save
+    else 
+      render :index
+    end  
   end
 
   private
