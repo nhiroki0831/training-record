@@ -3,6 +3,7 @@ class CustomersController < ApplicationController
 
   def index
     @customers = Customer.all
+    # @trainings = Training.all
   end
 
   def new
@@ -19,6 +20,7 @@ class CustomersController < ApplicationController
 
   def show
     @customer = Customer.find(params[:id])
+    @trainings = @customer.trainings.includes(:customer)
   end
 
   def edit

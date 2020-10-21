@@ -30,7 +30,7 @@
       </div>
       <div class="profile-item">
       <div class="profile-item-title">生年月日:</div>
-      <div class="item-text"><%= @customer.birthday.strftime("%Y月%-m月%-d日") %></div>
+      <div class="item-text"><%= @customer.birthday.strftime("%Y年%-m月%-d日") %></div>
       </div>
       <div class="profile-item">
       <div class="profile-item-title">年齢:</div>
@@ -89,5 +89,112 @@
     </div>
   </div>
   <div class="result">
+    <div class="result-title">
+      <h2>トレーニング実績</h2>
+    </div>
+    <div class="number-of-times">
+      <% count = 0 %>
+      <% @trainings.each do %>
+      <%count = count + 1 %>
+      <% end %>
+      <% if @customer.course_id == 2 %>
+      <% course = 16 %>
+      <% elsif @customer.course_id == 3 %>
+      <% course = 24 %>
+      <% elsif @customer.course_id == 4 %>
+      <% course = 32 %>
+      <% elsif @customer.course_id == 5 %>
+      <% course = 48 %>
+      <% elsif @customer.course_id == 6 %>
+      <% course = 64 %>
+      <% elsif @customer.course_id == 7 %>
+      <% course = 96 %>
+      <% end %>
+      <div class="customer-course-times">
+        残り回数:<%= course-count %>回
+      </div>
+    </div>
+    <div class="training-data-column">
+      <div class="count-column">
+      </div>
+      <div class="data-column">
+        トレーニング日
+      </div>
+      <div class="weight-column">
+        体重
+      </div>
+      <div class="fat-column">
+        体脂肪
+      </div>
+      <div class="blood-column">
+        最高血圧
+      </div>
+      <div class="blood-column">
+        最低血圧
+      </div>
+      <div class="pulse-column">
+        脈拍
+      </div>
+      <div class="course-column">
+        実施メニュー
+      </div>
+    </div>
+    <% count = 0 %>
+    <% @trainings.each do |training| %>
+    <div class="training-data">
+      <div class ="count-column">
+        <% count = count + 1 %>
+        <%= count %>
+      </div>
+      <div class="date-data">
+        <% wd = ["日", "月", "火", "水", "木", "金", "土"] %>
+        <%= training.created_at.strftime("%Y/%m/%d(#{wd[training.created_at.wday]})") %>
+      </div>
+      <div class="weight-data">
+        <%= training.weight%><span class="result-unit">kg</span>
+      </div>
+      <div class="fat-data">
+        <%= training.body_fat %><span class="result-unit">%</span>
+      </div>
+      <div class="blood-data">
+        <%= training.blood_pressure_max %><span class="result-unit">mmHg</span>
+      </div>
+      <div class="blood-data">
+        <%= training.blood_pressure_min %><span class="result-unit">mmHg</span>
+      </div>
+      <div class="pulse-data">
+        <%= training.pulse %><span class="result-unit">bpm</span>
+      </div>
+      <div class="course-data">
+        <% if training.part.include?("胸") %>
+          <span class="part-font"><%= "胸" %></span>
+        <% end %>
+        <% if training.part.include?("背中") %>
+          <span class="part-font"><%= "背中" %></span>
+        <% end %>
+        <% if training.part.include?("肩") %>
+          <span class="part-font"><%= "肩" %></span>
+        <% end %>
+        <% if training.part.include?("腕") %>
+          <span class="part-font"><%= "腕" %></span>
+        <% end %>
+        <% if training.part.include?("腹") %>
+          <span class="part-font"><%= "腹" %></span>
+        <% end %>
+        <% if training.part.include?("脚") %>
+          <span class="part-font"><%= "脚" %></span>
+        <% end %>
+        <% if training.part.include?("その他") %>
+          <span class="part-font"><%= "その他" %></span>
+        <% end %>
+      </div>
+      <%= link_to edit_customer_path(@customer.id) do %>
+      <button class="data-edit-btn">編集</button>
+      <% end %>
+      <%= link_to customer_path(@customer.id) , method: :delete , data: {confirm: "削除すると元に戻せません\n\n削除しても本当に宜しいですか？"} do %>
+      <button class="data-delete-btn">削除</button>
+      <% end %>
+    </div>
+    <% end %>
   </div>
 </div>

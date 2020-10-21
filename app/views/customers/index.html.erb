@@ -45,8 +45,14 @@
         <% end %>
         <%# 選択コースがその他の場合は非表示 %>
         <% unless  customer.course_id == 8 %>
-        残り回数<%= count %>回
         <% end %>
+        <% @result = 0 %>
+        <% @trainings = Training.where(customer_id: customer.id) %>
+        <% @trainings.each do |traiining| %>
+        <% @result = @result + 1 %>
+        <% end %>
+        <% @result %>
+        残り回数<%= count - @result %>回
       </div>
     </div>  
   </div>
@@ -56,6 +62,7 @@
       <button class="record-btn">記録する</button>
     <% end %>
   </div>
+
 </div>
 <% end %>  
 </body>
