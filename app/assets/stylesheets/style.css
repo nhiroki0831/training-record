@@ -332,7 +332,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .result{
-  background-color: orange;
+  background-color:  #fafafa;
   width: 700px;
 }
 
@@ -538,69 +538,93 @@ input[type="number"]::-webkit-inner-spin-button {
 /* 顧客詳細画面トレーニング情報追加 */
 
 .result{
-  background-color: green;
+  background-color: none;
   height: 800px;
   width: 700px;
   margin-left: 5px;
 }
 
+.number-of-times{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.customer-course-times{
+  background-color: #000c28 ;
+  width: 350px;
+  line-height: 30px;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
 .training-data-column{
-  background-color: slateblue;
+  background-color: none;
   height: 20px;
   display: flex;
   font-size: 12px;
+  border: solid 1px;
+  border-left: none;
+  border-right: none;
+  border-top: none;
 }
 
 
 .count-column,.count-data{
-  background-color: blue;
-  width:20px;
+  background-color: none;
+  width:30px;
 }
 
 .data-column,.date-data{
-  background-color: orange;
+  background-color: none;
   width: 100px;
 }
 
 .weight-column,.fat-column,.pulse-column{
-  background-color : yellow;
-  width: 50px;
+  background-color : none;
+  width: 55px;
 }
 
 .blood-column{
-  background-color : yellow;
+  background-color : none;
   width: 60px;
 }
 
 
 .course-column,.course-data{
-  background-color: peachpuff;
+  background-color: none;
   width: 180px;
 }
 
 .remarks-column,.remarks-data{
-  background-color: whitesmoke;
+  background-color: none;
   width: 40px;
 }
 
 .training-data{
-  background-color: purple;
+  background-color: none;
   height: 30px;
   display: flex;
   line-height: 30px;
   font-size: 12px;
+  border: solid 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 .weight-data,.fat-data,.pulse-data{
-  background-color : yellow;
-  width: 45px;
+  background-color : none;
+  width: 50px;
 
   text-align: right;
   padding-right: 5px;
 }
 
 .blood-data{
-  background-color : yellow;
+  background-color : none;
   width: 55px;
 
   text-align: right;
@@ -617,4 +641,14 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .result-unit{
   font-size: 0.1px;
+}
+
+.data-edit-btn,.data-delete-btn{
+  height: 25px;
+  font-size: 12px;
+  width: 45px;
+  background-color: #244472;
+  color: white;
+  border: none;
+  margin-left: 3px;
 }

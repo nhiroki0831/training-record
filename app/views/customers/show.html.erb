@@ -92,6 +92,28 @@
     <div class="result-title">
       <h2>トレーニング実績</h2>
     </div>
+    <div class="number-of-times">
+      <% count = 0 %>
+      <% @trainings.each do %>
+      <%count = count + 1 %>
+      <% end %>
+      <% if @customer.course_id == 2 %>
+      <% course = 16 %>
+      <% elsif @customer.course_id == 3 %>
+      <% course = 24 %>
+      <% elsif @customer.course_id == 4 %>
+      <% course = 32 %>
+      <% elsif @customer.course_id == 5 %>
+      <% course = 48 %>
+      <% elsif @customer.course_id == 6 %>
+      <% course = 64 %>
+      <% elsif @customer.course_id == 7 %>
+      <% course = 96 %>
+      <% end %>
+      <div class="customer-course-times">
+        残り回数:<%= course-count %>回
+      </div>
+    </div>
     <div class="training-data-column">
       <div class="count-column">
       </div>
@@ -166,6 +188,12 @@
           <span class="part-font"><%= "その他" %></span>
         <% end %>
       </div>
+      <%= link_to edit_customer_path(@customer.id) do %>
+      <button class="data-edit-btn">編集</button>
+      <% end %>
+      <%= link_to customer_path(@customer.id) , method: :delete , data: {confirm: "削除すると元に戻せません\n\n削除しても本当に宜しいですか？"} do %>
+      <button class="data-delete-btn">削除</button>
+      <% end %>
     </div>
     <% end %>
   </div>
