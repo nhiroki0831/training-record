@@ -46,13 +46,14 @@
         <%# 選択コースがその他の場合は非表示 %>
         <% unless  customer.course_id == 8 %>
         <% end %>
-        <% @result = 0 %>
-        <% @trainings = Training.where(customer_id: customer.id) %>
-        <% @trainings.each do %>
-        <% @result = @result + 1 %>
-        <% end %>
-        <% @result %>
-        残り回数<%= count - @result %>回
+        <%# <% @result = 0 %>
+        <%# <%@trainings = Training.where(customer_id: customer.id)%>
+        <%# <% @trainings.each do %>
+        <%# <% @result = @result + 1 %>
+        <%# <% end %> 
+        <%# <% @result %> 
+        残り回数<%= count %>
+        <%# <%= count - @result %>
       </div>
     </div>  
   </div>
