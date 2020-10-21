@@ -3,6 +3,7 @@ class CustomersController < ApplicationController
 
   def index
     @customers = Customer.all
+    # @trainings = Training.all
   end
 
   def new
