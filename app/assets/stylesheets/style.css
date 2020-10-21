@@ -322,6 +322,7 @@ input[type="number"]::-webkit-inner-spin-button {
  width: 900px;
  margin: 0 auto;
  height: 100vh;
+ display:flex;
 }
 
 .profile{
@@ -531,4 +532,89 @@ input[type="number"]::-webkit-inner-spin-button {
 .recording-error{
   background-color: none;
   margin-bottom: 20px;
+}
+
+
+/* 顧客詳細画面トレーニング情報追加 */
+
+.result{
+  background-color: green;
+  height: 800px;
+  width: 700px;
+  margin-left: 5px;
+}
+
+.training-data-column{
+  background-color: slateblue;
+  height: 20px;
+  display: flex;
+  font-size: 12px;
+}
+
+
+.count-column,.count-data{
+  background-color: blue;
+  width:20px;
+}
+
+.data-column,.date-data{
+  background-color: orange;
+  width: 100px;
+}
+
+.weight-column,.fat-column,.pulse-column{
+  background-color : yellow;
+  width: 50px;
+}
+
+.blood-column{
+  background-color : yellow;
+  width: 60px;
+}
+
+
+.course-column,.course-data{
+  background-color: peachpuff;
+  width: 180px;
+}
+
+.remarks-column,.remarks-data{
+  background-color: whitesmoke;
+  width: 40px;
+}
+
+.training-data{
+  background-color: purple;
+  height: 30px;
+  display: flex;
+  line-height: 30px;
+  font-size: 12px;
+}
+
+.weight-data,.fat-data,.pulse-data{
+  background-color : yellow;
+  width: 45px;
+
+  text-align: right;
+  padding-right: 5px;
+}
+
+.blood-data{
+  background-color : yellow;
+  width: 55px;
+
+  text-align: right;
+  padding-right: 5px;
+}
+
+.part-font{
+  background-color: #000c28 ;
+  color: white;
+  border-radius: 3px;
+  font-size: 2px;
+  padding:3px;
+}
+
+.result-unit{
+  font-size: 0.1px;
 }
