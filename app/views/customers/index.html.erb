@@ -48,7 +48,7 @@
         <% end %>
         <% @result = 0 %>
         <% @trainings = Training.where(customer_id: customer.id) %>
-        <% @trainings.each do |traiining| %>
+        <% @trainings.each do %>
         <% @result = @result + 1 %>
         <% end %>
         <% @result %>
