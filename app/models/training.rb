@@ -1,6 +1,6 @@
 class Training < ApplicationRecord
 
-  belongs_to :customer
+  belongs_to :customer, optional: true
   
   with_options presence: true do
     validates :weight, numericality: { with: /\A[0-9]+\z/ ,message: 'は半角数字のみ使用してください'}

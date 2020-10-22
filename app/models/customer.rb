@@ -5,7 +5,7 @@ class Customer < ApplicationRecord
   belongs_to_active_hash :course
 
   belongs_to :user
-  has_many :trainings
+  has_many :trainings, foreign_key: "customer_id", dependent: :destroy
 
   has_one_attached :image
 
