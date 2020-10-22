@@ -76,3 +76,6 @@ gem 'active_hash'
 #画像保存機能追加gem導入
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
+
+#Amazon S3へ画像保存先変更
+gem "aws-sdk-s3", require: false
