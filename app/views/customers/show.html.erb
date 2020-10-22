@@ -147,8 +147,8 @@
         <%= count %>
       </div>
       <div class="date-data">
-        <%# <% wd = ["日", "月", "火", "水", "木", "金", "土"] %> 
-        <%# <%= training.created_at.strftime("%Y/%m/%d(#{wd[training.created_at.wday]})") %> 
+        <% wd = ["日", "月", "火", "水", "木", "金", "土"] %>
+        <%= training.created_at.strftime("%Y/%m/%d(#{wd[training.created_at.wday]})") %>
       </div>
       <div class="weight-data">
         <%= training.weight%><span class="result-unit">kg</span>
