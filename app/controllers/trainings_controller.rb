@@ -28,6 +28,13 @@ class TrainingsController < ApplicationController
     end
   end
 
+  def destroy
+    @customer = Customer.find(params[:customer_id])
+    training = Training.find(params[:id])
+    training.destroy
+    redirect_to customer_path(@customer.id)
+  end
+
   private
 
   def training_params
