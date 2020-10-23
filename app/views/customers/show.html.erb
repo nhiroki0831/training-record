@@ -1,5 +1,4 @@
 <%= render "shared/header2" %>
-<h1>マイページ</h1>
 <div class="customer-show-box" >
   <div class="profile">
     <div class="profile-image-box">
@@ -13,11 +12,11 @@
       <h4 class="profile-title">プロフィール</h4>
       <div class="profile-item">
       <div class="profile-item-title">氏名:</div>
-      <div class="item-text"><%= @customer.first_name %><%= @customer.family_name %></div>
+      <div class="item-text"><%= @customer.family_name %><%= @customer.first_name %></div>
       </div>
       <div class="profile-item">
       <div class ="profile-item-title">フリガナ:</div>
-      <div class="item-text"><%= @customer.first_name_k %><%= @customer.family_name_k %></div>
+      <div class="item-text"><%= @customer.family_name_k %><%= @customer.first_name_k %></div>
       </div>
       <div class="profile-item">
       <%# 性別1なら男性、2なら女性を表示 %>
@@ -188,7 +187,7 @@
           <span class="part-font"><%= "その他" %></span>
         <% end %>
       </div>
-      <%= link_to edit_customer_path(@customer.id) do %>
+      <%= link_to edit_customer_training_path(@customer,training) do %>
       <button class="data-edit-btn">編集</button>
       <% end %>
       <%= link_to customer_path(@customer.id) , method: :delete , data: {confirm: "削除すると元に戻せません\n\n削除しても本当に宜しいですか？"} do %>

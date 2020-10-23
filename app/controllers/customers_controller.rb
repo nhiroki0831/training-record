@@ -27,8 +27,8 @@ class CustomersController < ApplicationController
   end
 
   def update
-    customer = Customer.find(params[:id])
-    if customer.update(customer_params)
+    @customer = Customer.find(params[:id])
+    if @customer.update(customer_params)
     else
       render :edit
     end  
