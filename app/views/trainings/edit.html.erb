@@ -1,6 +1,6 @@
 <%= render "shared/header2" %>
 <h1>トレーニング編集</h1>
-<h4 class="sign-up-ja">※<span class="required-input"></span>項目を入力し<span class="claim">記録する</span>をクリックして下さい</h4><br>
+<h4 class="sign-up-ja">※<span class="required-input"></span>項目を入力し<span class="claim">更新する</span>をクリックして下さい</h4><br>
  <div class="recording-error">
     <%= render 'shared/error_messages', model: @training %>
   </div>
@@ -36,29 +36,9 @@
       <% age = (today - birth ) / 10000 %>
       年齢<%= age %>歳
     </div>
-    <div class="training-from-course">
+    <div class="training-form-course">
       <div class="training-course-title">
           選択コース : <%= @customer.course.name%>
-      </div>
-      <div class="remaining">
-        <%# 選択コースによって残りの回数を表示 %>
-        <% if @customer.course_id == 2 %>
-        <% count = 16 %>
-        <% elsif @customer.course_id == 3 %>
-        <% count = 24 %>
-        <% elsif @customer.course_id == 4 %>
-        <% count = 32 %>
-        <% elsif @customer.course_id == 5 %>
-        <% count = 48 %>
-        <% elsif @customer.course_id == 6 %>
-        <% count = 64 %>
-        <% elsif @customer.course_id == 7 %>
-        <% count = 96 %>
-        <% end %>
-        <%# 選択コースがその他の場合は非表示 %>
-        <% unless  @customer.course_id == 8 %>
-        残り回数    <%= count %>回
-        <% end %>
       </div>
     </div>
   </div>
@@ -104,7 +84,7 @@
     </div>
   </div>  
 
-    <%= f.submit '記録する' , class:"recording-btn" %>
+    <%= f.submit '更新する' , class:"recording-btn" %>
   </div>
   <% end %>
 </div>

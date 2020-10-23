@@ -20,13 +20,21 @@ class TrainingsController < ApplicationController
   end
 
   def update
+    @customer = Customer.find(params[:customer_id])
     training = Training.find(params[:id])
-    training.update(training_params)
+    if training.update(training_params_edit)
+    else
+      render :edit
+    end
   end
 
   private
 
   def training_params
+    params.permit(:weight, :body_fat, :blood_pressure_max, :blood_pressure_min, :pulse, :remarks, part:[]).merge(customer_id: params[:customer_id])
+  end
+
+  def training_params_edit
     params.require(:training).permit(:weight, :body_fat, :blood_pressure_max, :blood_pressure_min, :pulse, :remarks, part:[]).merge(customer_id: params[:customer_id])
   end
 

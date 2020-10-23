@@ -323,6 +323,7 @@ input[type="number"]::-webkit-inner-spin-button {
  margin: 0 auto;
  height: 100vh;
  display:flex;
+ margin-top: 30px;
 }
 
 .profile{
@@ -393,7 +394,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 10px;
 }
 
-/* トレーニング記録画面css */
+/* トレーニング記録・編集画面css */
 
 .training-form{
   background-color: #fafafa;
@@ -457,6 +458,14 @@ input[type="number"]::-webkit-inner-spin-button {
   line-height: 90px;
 }
 
+.training-form-course{
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+}
+
 .training-course-title{
   background-color:  none;
   width: 180px;
@@ -467,15 +476,7 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 10px;
   font-size: 12px;
   margin: 0 auto;
-}
-
-.remaining{
-  background-color: none;
-  width: 230px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 20px;
-  font-weight: 800;
+  
 }
 
 .training-record{
@@ -553,7 +554,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .customer-course-times{
   background-color: #000c28 ;
-  width: 350px;
+  width: 250px;
   line-height: 30px;
   color: white;
   border-radius: 10px;

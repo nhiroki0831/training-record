@@ -1,5 +1,5 @@
 <%= render "shared/header2" %>
-<h1>トレーニングの更新が完了しました。</h1>
-<%= link_to root_path do %>
-<button class="index-btn">一覧に戻る</button>
+<h1>トレーニング記録の更新が完了しました。</h1>
+<%= link_to customer_path(@customer.id) do %>
+<button class="index-btn">詳細ページに戻る</button>
 <% end %>

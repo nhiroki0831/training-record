@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 <body>
-<h1>顧客登録一覧</h1>
+<h1>顧客一覧</h1>
 <h4>※新規登録は右上の<span class="customer-input-text">顧客登録</span>をクリックしてください。</h4><br>
 <div class="top-border"></div>
 <% @customers.each do |customer|%>
@@ -26,7 +26,7 @@
     </div>
     <div class="customer-name-count"> 
       <div class="customer-name">
-        <span class="name"><%= customer.first_name %> <%= customer.family_name %></span> 
+        <span class="name"><%= customer.family_name %> <%= customer.first_name %></span> 
       </div>
       <div class="training-count">
         <%# 選択コースによって残りの回数を表示 %>
