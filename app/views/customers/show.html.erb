@@ -188,7 +188,7 @@
           <span class="part-font"><%= "その他" %></span>
         <% end %>
       </div>
-      <%= link_to edit_customer_path(@customer.id) do %>
+      <%= link_to edit_customer_training_path(@customer,training) do %>
       <button class="data-edit-btn">編集</button>
       <% end %>
       <%= link_to customer_path(@customer.id) , method: :delete , data: {confirm: "削除すると元に戻せません\n\n削除しても本当に宜しいですか？"} do %>
