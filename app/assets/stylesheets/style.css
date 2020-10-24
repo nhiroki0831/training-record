@@ -535,6 +535,12 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-bottom: 20px;
 }
 
+.recorded{
+  display: flex;
+  width: 70vw;
+  justify-content: center;
+  margin: 0 auto;
+}
 
 /* 顧客詳細画面トレーニング情報追加 */
 
