@@ -554,7 +554,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .number-of-times{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   margin-bottom: 40px;
 }
 
@@ -565,6 +565,17 @@ input[type="number"]::-webkit-inner-spin-button {
   color: white;
   border-radius: 10px;
   font-size: 20px;
+  margin-right: 75px;
+}
+
+.show-recording-btn{
+  height: 30px;
+  width: 120px;
+  font-size: 12px;
+  background-color: #244472;
+  color: white;
+  border: none;
+  margin-right: 20px;
 }
 
 .training-data-column{
