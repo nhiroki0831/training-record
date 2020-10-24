@@ -49,6 +49,12 @@ input[type="number"]::-webkit-inner-spin-button {
   text-decoration: none;
 }
 
+.user{
+  color: white;
+  padding-right: 95px;
+  text-decoration: none;
+}
+
 .sign-up,.log-out,.sign-in{
   color: white;
   padding-right: 25px;
