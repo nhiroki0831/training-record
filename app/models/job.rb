@@ -11,4 +11,4 @@ class Job < ActiveHash::Base
     { id: 9, name: 'フリーター' },
     { id: 10, name: 'その他' }
   ]
-  end
+end

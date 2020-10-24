@@ -112,6 +112,11 @@
       <div class="customer-course-times">
         残り回数:<%= course-count %>回
       </div>
+      <div>
+        <%= link_to customer_trainings_path(@customer.id) do %>
+        <button class="show-recording-btn">記録する</button>
+        <% end %>
+      </div>
     </div>
     <div class="training-data-column">
       <div class="count-column">

@@ -49,6 +49,12 @@ input[type="number"]::-webkit-inner-spin-button {
   text-decoration: none;
 }
 
+.user{
+  color: white;
+  padding-right: 95px;
+  text-decoration: none;
+}
+
 .sign-up,.log-out,.sign-in{
   color: white;
   padding-right: 25px;
@@ -535,6 +541,12 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-bottom: 20px;
 }
 
+.recorded{
+  display: flex;
+  width: 70vw;
+  justify-content: center;
+  margin: 0 auto;
+}
 
 /* 顧客詳細画面トレーニング情報追加 */
 
@@ -548,7 +560,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .number-of-times{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   margin-bottom: 40px;
 }
 
@@ -559,6 +571,17 @@ input[type="number"]::-webkit-inner-spin-button {
   color: white;
   border-radius: 10px;
   font-size: 20px;
+  margin-right: 75px;
+}
+
+.show-recording-btn{
+  height: 30px;
+  width: 120px;
+  font-size: 12px;
+  background-color: #244472;
+  color: white;
+  border: none;
+  margin-right: 20px;
 }
 
 .training-data-column{

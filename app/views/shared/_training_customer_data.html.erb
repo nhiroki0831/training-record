@@ -1,0 +1,37 @@
+<div class="training-customer-date">
+    <div class="training-form-image-box">
+      <% if @customer.image.attached? %>
+      <%= image_tag @customer.image, size: '70x70' , class: "training-form-image" %>
+      <% else %>
+      <%= image_tag 'no_image.png', size: '70x70' , class: "training-form-image" %>
+      <% end %>
+    </div>
+    <div class="training-form-name">
+      <div class="name-form-k">
+        <%= @customer.first_name_k %>
+      </div>
+      <div class="name-form-main">
+        <%= @customer.first_name%>
+      </div>
+    </div>
+     <div class="training-form-name">
+      <div class="name-form-k">
+        <%= @customer.family_name_k %>
+      </div>
+      <div class="name-form-main">
+        <%= @customer.family_name %>
+      </div>
+    </div>
+    <div class="training-form-height-age">
+      身長:<%= @customer.height %>cm
+      <% birth = @customer.birthday.strftime("%Y%m%d").to_i %>
+      <% today = Date.today.strftime("%Y%m%d").to_i %>
+      <% age = (today - birth ) / 10000 %>
+      年齢<%= age %>歳
+    </div>
+    <div class="training-form-course">
+      <div class="training-course-title">
+          選択コース : <%= @customer.course.name%>
+      </div>
+    </div>
+  </div>
