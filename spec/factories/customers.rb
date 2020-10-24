@@ -5,8 +5,8 @@ FactoryBot.define do
     first_name_k  { 'アアア' }
     family_name_k { 'アアア' }
     gender        { '1' }
-    birthday      { '1930/01/01'}
-    tel           { '09012345678'}
+    birthday      { '1930/01/01' }
+    tel           { '09012345678' }
     postal_code   { '123-4567' }
     prefecture_id { '2' }
     city          { '西多摩郡' }

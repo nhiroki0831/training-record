@@ -9,4 +9,4 @@ class Course < ActiveHash::Base
     { id: 7, name: '96回コース' },
     { id: 8, name: 'その他' }
   ]
-  end
+end

@@ -5,8 +5,7 @@ FactoryBot.define do
     blood_pressure_max { '122' }
     blood_pressure_min { '87' }
     pulse              { '74' }
-    part               {["胸"]}
+    part               { ['胸'] }
     association        :customer
-
   end
 end
