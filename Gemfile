@@ -68,7 +68,8 @@ gem 'pry-rails'
 
 #Heroku デプロイ用gem導入
 group :production do
-  gem 'rails_12factor'
+  #gem 'rails_12factor'
+  gem 'unicorn', '5.4.1'
 end
 
 #カテゴリー選択用gem導入
