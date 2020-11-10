@@ -1,7 +1,5 @@
-# アプリ概要
-
 ## アプリ名 training-record
-  URL:[http://54.199.94.212](http://54.199.94.212）
+  URL:[http://54.199.94.212](http://54.199.94.212  
   開発ツール技術:HTML/CSS/Ruby/Ruby on Rails/JavaScript/GitHub/AWS(EC2/S3)
   <img width="1920" alt="training-record-index" src="https://user-images.githubusercontent.com/70359148/98643168-eda19b80-2371-11eb-860c-a3af19c7a63c.png">
 
@@ -31,9 +29,9 @@ pass:"2222"でトップページにアクセスできます。
 
 トップページには顧客の情報が一覧として表示されており、  
 新規登録、ログインを行う事で顧客登録、  トレーニング結果を記録できます。
-
+<img width="420" alt="new-customer" src="https://user-images.githubusercontent.com/70359148/98644131-5fc6b000-2373-11eb-8a1f-11b964213838.png">
 左上の新規登録より新規登録画面に推移
-
+<img width="1920" alt="new-customer-page" src="https://user-images.githubusercontent.com/70359148/98644199-7bca5180-2373-11eb-8608-9e40ca5ce1b4.png">
 必須情報を入力し、登録完了となります。  
 トップページに戻るをクリックしトップページに遷移後、  
 顧客登録をクリック、顧客登録画面に遷移します。  
@@ -41,16 +39,20 @@ pass:"2222"でトップページにアクセスできます。
 トップページに戻ると登録した顧客の一部情報が一覧に追加されます。  
 該当の顧客情報の横に記録するのボタンがある為、  
 クリックするとトレーニング記録画面に遷移します。  
+<img width="1920" alt="record-page" src="https://user-images.githubusercontent.com/70359148/98643503-702a5b00-2372-11eb-96cf-0953a5021764.png">
 必要な情報を入力し、記録するをクリックすると  トレーニングと健康状態の記録ができます。
 トップページまたは、該当顧客の詳細ページに遷移できます。  
+<img width="1920" alt="customer-show" src="https://user-images.githubusercontent.com/70359148/98643646-a5cf4400-2372-11eb-81f4-4c90de74d873.png">
 顧客詳細ページでは顧客の詳細ページに以降し、  トレーニング結果の履歴を確認でき、  
 編集するをクリックすると編集画面へ、顧客情報、  トレーニング情報それぞれ削除するボタンを
 クリックすると事で削除が可能となります。
 記録、編集、削除機能は登録した管理のみが実行可能です。
 
 ## E-R図
+<img width="769" alt="e-r" src="https://user-images.githubusercontent.com/70359148/98645428-49215880-2375-11eb-894a-1b20ad74d80c.png">
 
 ## 画面遷移図
+<img width="877" alt="transition-diagram" src="https://user-images.githubusercontent.com/70359148/98645474-5fc7af80-2375-11eb-86bb-933593e31e40.png">
 
 ## 追加実装予定機能
 * 結合テスト実施
