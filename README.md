@@ -1,5 +1,5 @@
 ## アプリ名 training-record
-  URL:[http://54.199.94.212](http://54.199.94.212  
+  URL:[http://54.199.94.212](http://54.199.94.212)
   開発ツール技術:HTML/CSS/Ruby/Ruby on Rails/JavaScript/GitHub/AWS(EC2/S3)
   <img width="1920" alt="training-record-index" src="https://user-images.githubusercontent.com/70359148/98643168-eda19b80-2371-11eb-860c-a3af19c7a63c.png">
 
@@ -23,9 +23,9 @@
 * 機能毎の単体テスト実施
 
 ## 使用方法
-[training-record](http://54.199.94.212)にアクセス頂き
-user:"admin"
-pass:"2222"でトップページにアクセスできます。
+[training-record](http://54.199.94.212)にアクセス頂き  
+user:"admin"  
+pass:"2222"  を入力しトップページにアクセスできます。
 
 トップページには顧客の情報が一覧として表示されており、  
 新規登録、ログインを行う事で顧客登録、  トレーニング結果を記録できます。
