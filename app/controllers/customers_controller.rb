@@ -20,6 +20,7 @@ class CustomersController < ApplicationController
   def show
     @customer = Customer.find(params[:id])
     @trainings = @customer.trainings.includes(:customer)
+    @graph = @customer.trainings.pluck(:created_at, :weight )
   end
 
   def edit
