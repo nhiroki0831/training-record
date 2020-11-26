@@ -86,3 +86,6 @@ gem 'image_processing', '~> 1.2'
 
 #Amazon S3へ画像保存先変更
 gem "aws-sdk-s3", require: false
+
+#トレーニング記録にグラフを追加
+gem 'chartkick'
