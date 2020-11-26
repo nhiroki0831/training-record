@@ -202,4 +202,6 @@
     <% end %>
   </div>
 </div>
-   <%= line_chart @graph, xtitle: "Data", ytitle: "Weight(kg)",  width: "600px", height: "400px" %>
+<div class="graph">
+   <%= line_chart @data.group_by_day(:created_at).sum(:weight),width: "700px", height: "300px", xtitle: "day" ,ytitle: "weight(kg)", curve: false %>
+</div>
