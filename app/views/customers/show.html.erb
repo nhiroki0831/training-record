@@ -134,8 +134,14 @@
        <% @weight << [[wcount],[nil]] %>
        <% @fat << [[wcount],[nil]] %>
        <% end %>
-       <%= line_chart @weight,width: "650px", height: "200px",ytitle: "体重(kg)", curve: false %>
-       <%= line_chart @fat,width: "650px", height: "200px",ytitle: "体脂肪(%)", curve: false %>
+       <h5>体重(kg)</h5>
+       <div class="weight-graph">
+       <%= line_chart @weight,width: "750px", height: "180px", curve: false %>
+       </div>
+       <h5>体脂肪(%)</h5>
+       <div class="fat-graph">
+       <%= line_chart @fat,width: "750px", height: "180px", curve: false %>
+       </div>
     </div>
     <div class="training-data-column">
       <div class="count-column">

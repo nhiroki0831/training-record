@@ -338,6 +338,24 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 200px;
 }
 
+.graph{
+  width: 700px;
+  background-color: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.weight-graph{
+  display: flex;
+  justify-content: center;
+}
+
+.fat-graph{
+  display: flex;
+  justify-content: center;
+  padding-left: 6px;
+}
+
 .result{
   background-color:  #fafafa;
   width: 700px;
