@@ -118,9 +118,24 @@
         <% end %>
       </div>
     </div>
+    <%# グラフを追加 %>
     <div class="graph">
-       <%= line_chart @data.group_by_day(:created_at).sum(:weight),width: "650px", height: "200px",ytitle: "体重(kg)", curve: false %>
-        <%= line_chart @data.group_by_day(:created_at).sum(:body_fat),width: "650px", height: "200px",ytitle: "体脂肪(%)", curve: false %>
+       <% @weight = [] %>
+       <% @fat = [] %>
+       <% wcount = 0 %>
+       <% @trainings.each do |training| %>
+       <% wcount += 1 %>
+       <% @weight << [[wcount],[training.weight]] %>
+       <% @fat << [[wcount],[training.body_fat]] %>
+       <% end %>
+       <% course -=wcount %>
+       <% course.times do %>
+       <% wcount += 1 %>
+       <% @weight << [[wcount],[nil]] %>
+       <% @fat << [[wcount],[nil]] %>
+       <% end %>
+       <%= line_chart @weight,width: "650px", height: "200px",ytitle: "体重(kg)", curve: false %>
+       <%= line_chart @fat,width: "650px", height: "200px",ytitle: "体脂肪(%)", curve: false %>
     </div>
     <div class="training-data-column">
       <div class="count-column">

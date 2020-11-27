@@ -20,7 +20,6 @@ class CustomersController < ApplicationController
   def show
     @customer = Customer.find(params[:id])
     @trainings = @customer.trainings.includes(:customer)
-    @data = @customer.trainings
   end
 
   def edit
