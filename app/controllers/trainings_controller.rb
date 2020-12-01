@@ -1,4 +1,6 @@
 class TrainingsController < ApplicationController
+  before_action :move_to_customer_index
+
   def index
     @customer = Customer.find(params[:customer_id])
     @training = Training.new
@@ -43,4 +45,9 @@ class TrainingsController < ApplicationController
   def training_params_edit
     params.require(:training).permit(:weight, :body_fat, :blood_pressure_max, :blood_pressure_min, :pulse, :remarks, part: []).merge(customer_id: params[:customer_id])
   end
+
+  def move_to_customer_index
+    redirect_to root_path unless user_signed_in?
+  end
+
 end
