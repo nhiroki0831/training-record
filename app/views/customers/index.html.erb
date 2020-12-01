@@ -62,11 +62,13 @@
     </div>  
   </div>
   <% end %>
+  <% if user_signed_in? %>
   <div class="recording">
     <%= link_to customer_trainings_path(customer.id) do %>
       <button class="record-btn">記録する</button>
     <% end %>
   </div>
+  <% end %>
 </div>
 <% end %>  
 </body>
