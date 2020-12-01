@@ -3,8 +3,8 @@
           <%= link_to "Customer Training Record", root_path , class: "header-title" %>
         <div>
           <% unless user_signed_in? %>
-          <%# <%= link_to "新規登録", new_user_registration_path , class: "sign-up"%>
-          <%# <%= link_to "ログイン", new_user_session_path , class: "sign-in"%> 
+          <%= link_to "新規登録", new_user_registration_path , class: "sign-up"%>
+          <%= link_to "ログイン", new_user_session_path , class: "sign-in"%> 
           <% else %>
           <%= link_to "ユーザー名 : #{current_user.nickname}" ,"#", class: "user" %>
           <%= link_to "顧客登録" , new_customer_path , class: "customer-input-link"%>
