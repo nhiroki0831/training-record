@@ -1,7 +1,11 @@
 <%= render "shared/header" %>
 <body>
 <h1>顧客一覧</h1>
+<% if user_signed_in? %>
 <h4>※新規登録は右上の<span class="customer-input-text">顧客登録</span>をクリックしてください。</h4><br>
+<% else %>
+<h4>※顧客の新規登録、トレーニング記録を行う場合は右上の<span class="customer-input-text">新規登録</span>または<span class="customer-input-text">ログイン</span>をして下さい。</h4><br>
+<% end %>
 <div class="top-border"></div>
 <% @customers.each do |customer|%>
 <div class="customer-info-box">
@@ -58,11 +62,13 @@
     </div>  
   </div>
   <% end %>
+  <% if user_signed_in? %>
   <div class="recording">
     <%= link_to customer_trainings_path(customer.id) do %>
       <button class="record-btn">記録する</button>
     <% end %>
   </div>
+  <% end %>
 </div>
 <% end %>  
 </body>
