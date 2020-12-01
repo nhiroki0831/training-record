@@ -602,6 +602,13 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-right: 20px;
 }
 
+.not_signed{
+  height: 30px;
+  width: 120px;
+  background-color: none;
+  margin-right: 20px;
+}
+
 .training-data-column{
   background-color: none;
   height: 20px;

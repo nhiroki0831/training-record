@@ -115,8 +115,12 @@
         残り回数:<%= course-count %>回
       </div>
       <div>
+        <% if user_signed_in? %>
         <%= link_to customer_trainings_path(@customer.id) do %>
         <button class="show-recording-btn">記録する</button>
+        <% end %>
+        <% else %>
+        <div class="not_signed"></div>
         <% end %>
       </div>
     </div>
